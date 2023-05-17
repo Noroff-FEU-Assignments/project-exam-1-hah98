@@ -7,6 +7,11 @@ body {
   font-family: "Trocchi", serif;
 }
 
+main {
+  min-height: calc(100vh - 600px);
+  padding-bottom: 50px;
+}
+
 html,
 body {
   margin: 0;
@@ -142,7 +147,10 @@ nav ul li a:hover {
 
 footer {
   height: 600px;
-  position: relative;
+  position: absolute
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: #eee9e3;
 }
 
@@ -157,7 +165,7 @@ footer {
   gap: 80px;
   margin-bottom: 50px;
   margin-left: 80px;
-  
+  margin-top: 50px;
 }
 
 .footer-links li {
@@ -168,8 +176,16 @@ footer {
   color: black;
 }
 
+/* .sub-footer {
+  display: flex;
+  margin-right: 100px;
+  justify-content: space-between;
+  margin-left: 200px;
+} */
+
 .rights {
-  margin-left: 0px;
+  margin-left: 250px;
+  margin-top: -50px;
 }
 
 .fa-arrow-right-long {
@@ -177,40 +193,237 @@ footer {
 }
 
 .s-accounts {
-  /* justify-content: space-between;
-  align-items: vertical; */
+  display: flex;
   display: inline-block;
-  margin-top: 50px;
+  margin-right: 100px;
+  justify-content: space-between;
 }
 
 .smedia {
   display: flex;
   align-items: center;
   margin-top: -100px;
+  margin-left: -40px;
+  justify-content: space-between;
+}
+
+.sub-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /*  margin-left: 200px; */
+  float: right;
+  margin-top: -200px;
+}
+
+.sub-footer h3 {
+  margin-bottom: 30px;
+}
+
+.sub-footer p {
+  margin-bottom: 30px;
+  margin-right: 20px;
 }
 
 .subscribe {
   border: none;
   background: #ffdbe9;
-  color: #fff;
-  padding: 12px 30px;
-  margin: 25px;
-  border-radius: 30px;
   color: #000;
+  padding: 12px 30px;
+  border-radius: 30px;
   font-weight: bold;
   font-size: 15px;
   text-decoration: none;
   transition: 0.3s;
-  margin-left: 300px;
-  border: solid 2px;
 }
-
 .subscribe:hover {
   cursor: pointer;
   transform: scale(1.3);
 }
 
-@media screen and (max-width: 900px) {
+/* List of blogs site */
+
+.navbar-three {
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  height: 270px;
+  display: flex;
+
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.blog-post-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 300px));
+  gap: 50px;
+  padding: 1em;
+  width: 100vw;
+  justify-content: center;
+  margin-top: -100px;
+}
+
+.img-blogs {
+  height: 330px;
+  width: 300px;
+  object-fit: cover;
+  gap: 50px;
+}
+h2.blog-post-title {
+  font-family: Arial, Helvetica, sans-serif
+}
+
+/* Contact page */
+
+.header-image-contact {
+  display: block;
+  background-image: url("../Images/samantha-gades-x40Q9jrEVT0-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.navbar-two {
+  background-image: url("../Images/samantha-gades-x40Q9jrEVT0-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 270px;
+  display: flex;
+
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.logo-two {
+  width: 250px;
+  height: 250px;
+  margin-top: -77px;
+  margin-right: 150px;
+}
+
+/* nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+} */
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #607460;
+  transition: 0.3s;
+}
+
+.button {
+  border: none;
+  background: #c1e1c1;
+  border: 2px solid;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: #000;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.fav-img {
+  display: flex;
+  width: 800px;
+  height: auto;
+  margin-left: 300px;
+  margin-top: -350px;
+  z-index: -1;
+}
+
+/* Contact form */
+
+.container-con {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -100px;
+}
+
+form {
+  background: #ffdbe9;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1vw 4vw;
+  width: 90%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+form h3 {
+  color: #000;
+  font-weight: 800;
+  margin-top: 50px;
+}
+
+form input,
+form textarea {
+  display: flex;
+  justify-content: center;
+  border: 0;
+  margin: 10px 0;
+  padding: 20px;
+  outline: none;
+  background: #f5f5f5;
+  font-size: 13px;
+}
+
+form button {
+  padding: 15px;
+  background: #e0a4bc;
+  color: #ffff;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0;
+  border-radius: 30px;
+}
+
+.form-error {
+  display: none;
+  text-transform: capitalize;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+/* @media screen and (max-width: 900px) {
   .carousel img {
     width: calc(100% / 2);
   }
@@ -220,4 +433,4 @@ footer {
   .carousel img {
     width: 100%;
   }
-}
+} */
