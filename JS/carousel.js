@@ -48,3 +48,27 @@ document.addEventListener("mouseup", () => {
   isDragStart = false;
 });
  */
+
+
+
+
+
+
+
+
+// for the id fetch post version 
+document.body.appendChild(container);
+/* navigate to post page*/
+const title = document.querySelector(".blog-post-title");
+const featuredMedia = post._embedded["wp:featuredmedia"][0].source_url;
+
+title,featuredMedia.forEach((button) => {
+  button.addEventListener("click", () => {
+    const postId = button.closest(".containerpost").getAttribute("data-id");
+    console.log("POST-ID", postId);
+
+    // navigate to joke html
+    window.location.href = `blog-post.html?id=${postId}`; // navigate to blog-post.html with id as parameter
+  });
+});
+});
