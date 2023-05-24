@@ -1,5 +1,6 @@
 const URL =
   "http://localhost:8888/Love&union/wp-json/wp/v2/posts?_embed&per_page=12";
+
 const results = [];
 
 const container = document.querySelector("#blog-posts");
@@ -25,20 +26,37 @@ fetchData().then(() => {
     containerpost.className = "containerpost";
     containerpost.setAttribute("data-id", post.id);
 
-    const title = document.createElement("h2");
+    const title = document.createElement("h3");
     title.innerText = post.title.rendered;
     title.className = "blog-post-title";
 
     const featuredMedia = document.createElement("img");
     featuredMedia.src = post._embedded["wp:featuredmedia"][0].source_url;
     featuredMedia.className = "img-blogs";
+    
 
-    /* adding elements to little container */
+    /* navigate to post page on title click */
+    title.addEventListener("click", () => {
+      const postId = containerpost.getAttribute("data-id");
+      console.log("POST-ID", postId);
+      window.location.href = `blog-post.html?id=${postId}`; // navigate to blog-post.html with id as parameter
+    });
+
+    /* navigate to post page on title click */
+    featuredMedia.addEventListener("click", () => {
+      const postId = containerpost.getAttribute("data-id");
+      console.log("POST-ID", postId);
+      window.location.href = `blog-post.html?id=${postId}`; // navigate to blog-post.html with id as parameter
+    });
+
+    /* Adding elements to little container */
     containerpost.appendChild(title);
     containerpost.appendChild(featuredMedia);
 
-    /* adding little container to main containers */
+    /* Adding little container to main containers */
     container.appendChild(containerpost);
+
+    document.body.appendChild(container);
   });
 
   // Loading more post button //
@@ -67,58 +85,23 @@ fetchData().then(() => {
       featuredMedia.src = post._embedded["wp:featuredmedia"][0].source_url;
       featuredMedia.className = "img-blogs";
 
-      /* adding elements to little container */
+    
+      /* Adding elements to little container */
       containerpost.appendChild(title);
       containerpost.appendChild(featuredMedia);
+      
 
-      /* adding little container to main containers */
+      /* Adding little container to main containers */
       container.appendChild(containerpost);
     });
-
-    // Hide the "load more button" //
+    /* Hiding the load more button */
     seeMorePostsButton.style.display = "none";
+
+    /* Modal for the images on blog-post.html */
+    const modal = document.createElement("div");
+    modal.className = "img-modal";
+    const modalImage = document.createElement("img");
+    modal.appendChild(modalImage);
+    document.body.appendChild(modal);
   }
 });
-
-// for the id fetch post version
-document.body.appendChild(container);
-/* navigate to post page*/
-const title = document.querySelector(".blog-post-title");
-const featuredMedia = post._embedded["wp:featuredmedia"][0].source_url;
-
-title,
-  featuredMedia.forEach((button) => {
-    button.addEventListener("click", () => {
-      const postId = button.closest(".containerpost").getAttribute("data-id");
-      console.log("POST-ID", postId);
-
-      // navigate to joke html
-      window.location.href = `blog-post.html?id=${postId}`; // navigate to blog-post.html with id as parameter
-    });
-  });
-
-/* const allTitles = document.querySelectorAll("blog-post-title");
-const featuredMediaAll = document.querySelectorAll("img-blogs");
-
-allTitles.forEach((title) => {
-  allTitles.addEventListener("click", () => {
-    const postId = title.closest(".containerpost").getAttribute("data-id");
-    console.log("POST-ID", postId);
-
-    // navigating to blog-post.html //
-    window.location.href = `blog-post.html?id=${postId}`;
-  });
-});
-
-featuredMediaAll.forEach((featuredMedia) => {
-  featuredMediaAll.addEventListener("click", () => {
-    const postId = featuredMedia
-      .closest(".containerpost")
-      .getAttribute("data-id");
-    console.log("POST-ID", postId);
-
-    // navigating to blog-post.html //
-    window.location.href = `blog-post.html?id=${postId}`;
-  });
-});
- */

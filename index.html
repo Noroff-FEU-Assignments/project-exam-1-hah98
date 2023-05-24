@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Love & Union main page" />
     <link href="./CSS/style.css" rel="stylesheet" />
+    <script src="./JS/carousel.js" defer  ></script>
     <title>Love and union</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
@@ -31,8 +32,55 @@
        <!-- https://hah98.wordpress.com/wp-json/wp/v2/posts -->
       <h1 class="welcome"> WELCOME TO LOVE & UNION </h1>
 
+
+    <!--   <section class="latest-post">
+        <div class="wrapper">
+          <div id="blog-posts"></div>
+          <i class="fa-solid fa-angle-left" id="backButton"></i>
+          <div class="carousel">
+            
+          </div>
+          <i class="fa-solid fa-angle-right" id="forwardButton"></i>
+        </div>
+        </div>
+      </section>
+      -->
+
+      <section aria-label="latest-post">
+        <div class="carousel" data-carousel>
+          <button class="carousel-button prev" data-carousel-button="prev"> &#8656;</button>
+          <button class="carousel-button next" data-carousel-button="next"> &#8658;</button>
+          <ul>
+          <li class="slides" data-active>
+            <img src="./Images/foto-pettine-IfjHaIoAoqE-unsplash.jpg" alt="something 1"> <!-- I want my api fetch to go here --> 
+          </li>
+          
+          <li class="slides" >
+            <img src="./Images/emma-frances-logan-Yypcm0DCJtQ-unsplash.jpg" alt="something 2"> <!-- I want my api fetch to go here --> 
+          </li>
+
+          <li class="slides" >
+            <img src="./Images/kimberly-fowler-3xzmM1U1_iY-unsplash.jpg" alt="something 3" > <!-- I want my api fetch to go here --> 
+          </li>
+
+          <li class="slides" >
+            <img src="./Images/beatriz-perez-moya-M2T1j-6Fn8w-unsplash.jpg" alt="something 3" > <!-- I want my api fetch to go here --> 
+          </li>
+
+          <li class="slides" >
+            <img src="./Images/hisu-lee-FTW8ADj5igs-unsplash.jpg" alt="something 3" > <!-- I want my api fetch to go here --> 
+          </li>
+          </ul>
+        </div>
+      </section>
+
+
+
+
+
+<!-- 
       <section class="latest-post">
-       <!--  <h2 > OUR LATEST POSTS</h2> -->
+        <h2 > OUR LATEST POSTS</h2> 
        
         <div class="wrapper">
         <i class="fa-solid fa-angle-left"></i>
@@ -50,7 +98,7 @@
         <i class="fa-solid fa-angle-right"></i>
         </div>
        
-      </section>
+      </section> -->
 
      <h2 class="welcome"> LOVE & UNION: EVERYTHING WEDDING AND STYLE  </h2>
 
@@ -81,7 +129,7 @@
 
     </main>
 
-    <script src="./JS/carousel.js" refer ></script>
+   
     <!-- Footer html -->
     <footer>
       .
@@ -98,7 +146,7 @@
       <section class="sub-footer">
       <h3> SUBSCRIBE FOR MORE</h3>
       <p>SIGN UP FOR OUR NEWSLETTER</p>
-      <a href="./index.html" class="subscribe"> SUBSCRIBE </a>
+      <a href="./contact.html" class="subscribe"> SUBSCRIBE </a>
       </section>
 
       
