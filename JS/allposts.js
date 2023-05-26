@@ -76,7 +76,7 @@ fetchData().then(() => {
       containerpost.className = "containerpost";
       containerpost.setAttribute("data-id", post.id);
 
-      const title = document.createElement("h2");
+      const title = document.createElement("h3");
       title.innerText = post.title.rendered;
       title.className = "blog-post-title";
 
