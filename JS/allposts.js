@@ -33,7 +33,6 @@ fetchData().then(() => {
     const featuredMedia = document.createElement("img");
     featuredMedia.src = post._embedded["wp:featuredmedia"][0].source_url;
     featuredMedia.className = "img-blogs";
-    
 
     /* navigate to post page on title click */
     title.addEventListener("click", () => {
@@ -85,11 +84,23 @@ fetchData().then(() => {
       featuredMedia.src = post._embedded["wp:featuredmedia"][0].source_url;
       featuredMedia.className = "img-blogs";
 
-    
+      /* navigate to post page on title click */
+      title.addEventListener("click", () => {
+        const postId = containerpost.getAttribute("data-id");
+        console.log("POST-ID", postId);
+        window.location.href = `blog-post.html?id=${postId}`;
+      });
+
+      /* navigate to post page on image click */
+      featuredMedia.addEventListener("click", () => {
+        const postId = containerpost.getAttribute("data-id");
+        console.log("POST-ID", postId);
+        window.location.href = `blog-post.html?id=${postId}`;
+      });
+
       /* Adding elements to little container */
       containerpost.appendChild(title);
       containerpost.appendChild(featuredMedia);
-      
 
       /* Adding little container to main containers */
       container.appendChild(containerpost);

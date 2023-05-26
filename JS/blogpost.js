@@ -15,6 +15,10 @@ async function fetchData() {
   }
 }
 
+function updateDocumentTitle(title) {
+  document.title = `My blog | ${title}`;
+}
+
 fetchData().then(() => {
   /* create container */
   const containerpost = document.createElement("div");
