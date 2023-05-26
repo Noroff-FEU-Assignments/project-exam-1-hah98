@@ -15,10 +15,6 @@ async function fetchData() {
   }
 }
 
-function updateDocumentTitle(title) {
-  document.title = `My blog | ${title}`;
-}
-
 fetchData().then(() => {
   /* create container */
   const containerpost = document.createElement("div");
@@ -77,6 +73,9 @@ fetchData().then(() => {
   container.appendChild(containerpost);
 
   document.body.appendChild(container);
+
+  /* Calling a function to update the document title */
+  updateDocumentTitle(this.post.title.rendered);
 });
 
 /* Adding modal functionality */
@@ -96,4 +95,8 @@ function createModal() {
   });
 
   return modal;
+}
+
+function updateDocumentTitle(title) {
+  document.title = `My blog | ${title}`;
 }
