@@ -1,7 +1,9 @@
 const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get("id");
 
-const URL = `http://localhost:8888/Love&union/wp-json/wp/v2/posts/${postId}?_embed`;
+const URL =
+  /* `http://localhost:8888/Love&union/wp-json/wp/v2/posts/${postId}?_embed`; */
+  `https://loveandunion.haharun.no/wp-json/wp/v2/posts/${postId}?_embed`;
 const container = document.createElement("div");
 
 async function fetchData() {

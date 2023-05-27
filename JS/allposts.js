@@ -1,5 +1,6 @@
 const URL =
-  "http://localhost:8888/Love&union/wp-json/wp/v2/posts?_embed&per_page=12";
+  /*  "http://localhost:8888/Love&union/wp-json/wp/v2/posts?_embed&per_page=12"; */
+  "https://loveandunion.haharun.no/wp-json/wp/v2/posts?_embed&per_page=12";
 
 const results = [];
 
