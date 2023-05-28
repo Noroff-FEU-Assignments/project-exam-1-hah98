@@ -1,9 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get("id");
 
-const URL =
-  /* `http://localhost:8888/Love&union/wp-json/wp/v2/posts/${postId}?_embed`; */
-  `https://loveandunion.haharun.no/wp-json/wp/v2/posts/${postId}?_embed`;
+const URL = `https://loveandunion.haharun.no/wp-json/wp/v2/posts/${postId}?_embed`;
 const container = document.createElement("div");
 
 async function fetchData() {
@@ -25,12 +23,6 @@ fetchData().then(() => {
 
   const contentWrapper = document.createElement("div");
   contentWrapper.innerHTML = this.post.content.rendered;
-
-  /* const featuredMedia = document.createElement("img");
-  if (this.post._embedded && this.post._embedded["wp:featuredmedia"]) {
-    featuredMedia.src = this.post._embedded["wp:featuredmedia"][0].source_url;
-  }
-  featuredMedia.className = "img-blogpost"; */
 
   const featuredMedia = contentWrapper.querySelector("img");
   if (featuredMedia) {

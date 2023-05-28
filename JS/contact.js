@@ -33,7 +33,7 @@ function validateForm(event) {
   if (checkLength(adress.value, 25) === true) {
     adressError.style.display = "none";
   } else {
-    addressError.style.display = "block";
+    adressError.style.display = "block";
   }
 
   if (
@@ -44,7 +44,12 @@ function validateForm(event) {
   ) {
     console.log("Yippy, Success!");
     alert("Thank you, Your question has been sent to our team!");
+    resetForm();
   }
+}
+
+function resetForm() {
+  form.reset();
 }
 
 form.addEventListener("submit", validateForm);
