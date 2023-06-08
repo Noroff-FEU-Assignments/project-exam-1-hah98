@@ -1,4 +1,4 @@
-# SEMSTER Project 1
+# Semester Project 1
 
 ![image](./Images/Skjermbilde%202023-06-09%20kl.%2001.37.46.png)
 
