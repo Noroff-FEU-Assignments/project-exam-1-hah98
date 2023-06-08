@@ -1,15 +1,14 @@
-# Your project title
+# SEMSTER Project 1
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](./Images/Skjermbilde%202023-06-09%20kl.%2001.37.46.png)
 
-This is my website for the Project Exam 1, I have builed a blog website called Love & Union. 
+This is my website for the Project Exam 1, I have builed a blog website called Love & Union.
 
 ## Description
 
-Love & Union is a blog page where readers can read about all things weddings. Everything from wedding dresses, celebrity weddings, wedding decor and fashion. On the page users can learn more about L&U, contact the page owners and of course read blog posts. 
+Love & Union is a blog page where readers can read about all things weddings. Everything from wedding dresses, celebrity weddings, wedding decor and fashion. On the page users can learn more about L&U, contact the page owners and of course read blog posts.
 
-
-The website contains these pages: 
+The website contains these pages:
 
 - Index.html, carousel.js
 - Listofblogs.html, allpost.js
@@ -41,8 +40,6 @@ git clone git@github.com:Noroff-FEU-Assignments/project-exam-1-hah98
 
 2. Install the dependencies:
 
-
-
 ### Running
 
 Click the link below to run the site:
@@ -57,4 +54,4 @@ This is a project I have worked on myself. I have plans on going back to this pr
 
 Contact me here:
 
-Dicord username: hah98 
+Dicord username: hah98
